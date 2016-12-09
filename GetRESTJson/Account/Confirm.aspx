@@ -15,7 +15,7 @@
                     add a new line here
                 </text>
                 <div>
-                    this changing does not make secnes, NO! NO! NO!, it changed at Remote side.
+                    this changing does not make secnes, 
             </div>
                 An error has occurred.
             </p>
