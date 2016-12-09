@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Domain stuffs</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
+    </script>
+    <script>
+   $(document).ready(function () {
+
+     $(location).attr('href');      // http://www.refulz.com:8082/index.php#tab2
+  $(location).attr('pathname');  // index.php
+
+                $('#URL').append(document.URL);
+                $('#href').append(document.location.href);
+				$('#origin').append(document.location.origin);
+				$('#hostname').append(document.location.hostname);
+                $('#host').append(document.location.host);
+                $('#pathname').append(document.location.pathname);
+   })
+
+    </script>
+</head>
+<body>
+
+    <div>
+        <p id="URL">The URL is </p>
+        <p id="href">The href is </p>
+        <p id="origin">The origin is </p>
+        <p id="hostname">The hostname is </p>
+        <p id="host">The host is </p>
+        <p id="pathname">The pathname is </p>
+    </div>
+</body>
+</html>

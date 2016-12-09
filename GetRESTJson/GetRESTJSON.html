@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <select id="method">
+            <option value="get">GET</option>
+            <option value="post">POST</option>
+            <option value="put">PUT</option>
+        </select>
+        <input type="button" value="Try it" onclick="sendRequest()" />
+        <p id='value1'></p>
+    </div>
+    <script>
+    // TODO: Replace with the URL of your WebService app
+        var serviceUrl = 'http://50.100.14.26/api/v2/test/json/9BB1408A-81DD-43D1-B621-83E2F71D2669/en';
+
+    function sendRequest() {
+        var method = $('#method').val();
+
+        $.ajax({
+            type: method,
+            url: serviceUrl
+        }).done(GetJson)
+
+    }
+    function GetJson(data)
+    {
+        for (i in data)
+        {
+            $('#value1').append(data[i]["ProvinceID"] + ' ------ ' + data[i]["Alias"] + ' ------- ' + data[i]["Province"] +'<br/>');
+        }
+    }
+    </script>
+</body>
+</html>
+<!--.error(function (jqXHR, textStatus, errorThrown) {
+            $('#value1').text(jqXHR.responseText || textStatus);});-->

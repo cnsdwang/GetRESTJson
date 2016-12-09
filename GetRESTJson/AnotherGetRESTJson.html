@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            $.getJSON('http://50.100.14.26/api/v2/test/json/9BB1408A-81DD-43D1-B621-83E2F71D2669/en', function (data) {
+
+                //put your codes to do something here
+                for (i in data) {
+                    alert(data[i]["Province"]);
+                }
+                $('#greeting-ProvinceID').append(data[i].ProvinceID);
+                $('#greeting-Alias').append(data[i].Alias);
+                $('#greeting-Province').append(data[i].Province);
+            });
+
+            });
+
+    </script>
+    <!--[{"ProvinceID":9,"Alias":"ON","Province":"Ontario"}]-->
+</head>
+
+<body>
+    <div>
+        <p id="greeting-ProvinceID">The ProvinceID is </p>
+        <p id="greeting-Alias">The Alias is </p>
+        <p id="greeting-Province">The Province is </p>
+
+
+    </div>
+</body>
+</html>
