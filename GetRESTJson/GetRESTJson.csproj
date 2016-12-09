@@ -213,6 +213,8 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
     <Content Include="Site.Master" />
+    <Content Include="SQLScript\Proc_1.sql" />
+    <Content Include="SQLScript\sql1.sql" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
