@@ -1,0 +1,1 @@
+﻿select [CustomerCompany] from [DEMO_LK_Customer]
