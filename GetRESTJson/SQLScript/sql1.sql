@@ -6,3 +6,5 @@ SELECT  [CustomerID]
       ,[CustomerAddress]
   FROM [BIWORK_SSIS].[dbo].[DEMO_LK_Customer]
 go
+go
+
